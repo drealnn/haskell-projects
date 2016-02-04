@@ -1,0 +1,58 @@
+Homework 1 
+----------
+
+THIS IS A DRAFT; I WILL DISCUSS THIS HOMEWORK (PROBLEM 2) IN
+TODAY'S CLASS (01/26) BEFORE POSTING THE FINAL HOMEWORK AND
+TEST CASES.
+
+Problem 1:
+----------
+
+Implement the function 
+
+  computePolygonArea :: [(Double,Double)] -> Double
+
+that computes the area of the polygon.  The formula
+for the area of the polygon is given at:
+
+http://mathworld.wolfram.com/PolygonArea.html
+
+You should implement the function
+
+  det :: (Double,Double) -> (Double,Double) -> Double
+
+that computes the determinate of the 2 x 2 matrix whose
+columns are given by the first and second arguments, respectively.
+
+You should use the det function in your computation of the
+polygon area.
+
+Problem 2:
+----------
+
+Read the subsections Setup and Movement of the section Rules 
+at https://en.wikipedia.org/wiki/Chess
+
+Given the definitions
+
+  type Position = (Char,Int)
+
+  data Color =
+    Black | White
+    deriving (Eq,Show)
+
+  data Piece =
+    King | Queen | Rook | Bishop | Knight | Pawn
+    deriving (Eq,Show)
+
+implement the functions
+
+  isValidPosition :: Position -> Bool
+  -- valid row    indices are: a,b,c,...,h
+  -- valid column indices are: 1,2,3,...,8
+
+  isLegalMove :: Color -> Piece -> Position -> Position -> Bool
+  -- the valid moves are explained at https://en.wikipedia.org/wiki/Chess
+
+that check whether a position is a valid board position and whether a
+move by a piece is legal.
